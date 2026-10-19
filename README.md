@@ -1,68 +1,50 @@
-# Portfólio de landing pages
+# Portfólio de landing pages (Vite, HTML estático)
 
-Projeto em Vite (JavaScript puro, sem framework), pronto para publicar na Vercel.
+A página inteira está pronta no `index.html`. O JavaScript (`src/main.js`, um único arquivo) só cuida do carrossel e da animação de entrada.
 
-## Rodar no seu computador
-
-Requisito: Node.js 20.19 ou superior.
+## Rodar e publicar
 
 ```bash
 npm install
-npm run dev        # abre em http://localhost:5173
-npm run build      # gera a pasta dist/
-npm run preview    # testa a versão de produção
+npm run dev       # http://localhost:5173
+npm run build     # gera dist/
+npm run preview
 ```
 
-## Publicar na Vercel
+Na Vercel: Framework **Vite**, build `npm run build`, saída `dist`. O `vercel.json` já define o cache.
 
-**Pelo GitHub (recomendado)**
+## Como o cache funciona
 
-1. Crie um repositório e envie estes arquivos (`git init`, `git add .`, `git commit`, `git push`).
-2. Em vercel.com, clique em **Add New → Project** e escolha o repositório.
-3. A Vercel detecta o Vite sozinha. Confirme:
-   - Framework Preset: **Vite**
-   - Build Command: `npm run build`
-   - Output Directory: `dist`
-4. Clique em **Deploy**. Cada `git push` publica uma nova versão.
+O build gera arquivos com hash no nome (`/assets/index-a1b2c3.css`, `.js` e as imagens). Como o nome muda quando o conteúdo muda, a Vercel os envia com `Cache-Control: public, max-age=31536000, immutable` (1 ano). O `index.html` não é cacheado de forma fixa, então cada publicação nova é vista na hora e os arquivos antigos continuam em cache nos visitantes.
 
-**Pela linha de comando**
+Regra de ouro: **coloque imagens em `src/assets/`** (ganham hash e cache de 1 ano). A pasta `public/` não gera hash e só é indicada para o favicon.
 
-```bash
-npm i -g vercel
-vercel          # primeira publicação (prévia)
-vercel --prod   # publicação final
-```
+## Imagens
 
-## Como editar
+- Todas já têm `width` e `height` (evita que a página "pule" ao carregar).
+- As que ficam abaixo da primeira tela têm `loading="lazy"`: só baixam quando estão perto de aparecer. As duas do topo (hero) carregam direto, porque já aparecem na primeira tela.
+- Para capturas reais, prefira **WebP ou AVIF**, com largura máxima de 900 px, e ajuste `width`/`height` para as medidas reais.
+
+## Adicionar um projeto
+
+1. Salve a imagem em `src/assets/` (ex.: `meu-projeto.webp`).
+2. No `index.html`, copie um bloco `<a class="slide"> ... </a>` dentro de `#trk`, troque a imagem, o segmento, o nome e a descrição. Os pontos e o contador se ajustam sozinhos.
+
+## Onde editar
 
 | O que mudar | Onde |
 | --- | --- |
-| Nome, textos, e-mail, links sociais, serviços | `index.html` |
-| Projetos do carrossel | `src/data/projects.js` |
-| Cores e tipografia | `src/style.css` (variáveis no topo, em `:root`) |
-| Ícone da aba | `public/favicon.svg` |
+| Nome, textos, e-mail, redes, serviços | `index.html` |
+| Cores e tipografia | `src/style.css` (`:root`) |
+| Comportamento do carrossel | `src/main.js` |
+| Cache e cabeçalhos | `vercel.json` |
 
-### Adicionar um projeto
+## Se o `node_modules` foi para o repositório
 
-Abra `src/data/projects.js`, copie uma linha da lista `destaques` e troque os dados.
+Ele não deve ser versionado (já está no `.gitignore`). Para remover do Git:
 
-### Usar capturas reais no lugar das imagens fictícias
-
-1. Salve a captura em `public/projetos/` (por exemplo, `aura.png`, proporção vertical de uma página inteira funciona melhor).
-2. No projeto, adicione `imagem: "/projetos/aura.png"` e, se quiser, `url: "https://link-da-pagina.com"`.
-
-### Trocar o case em destaque e o hero
-
-Em `src/main.js`, as imagens do hero e do case usam `todos[0]` e `todos[2]`. Troque o número para escolher outro projeto.
-
-## Estrutura
-
-```
-index.html            marcação da página
-src/main.js           monta a página e inicia o carrossel
-src/style.css         estilos (responsivos)
-src/data/projects.js  dados dos projetos
-src/lib/shot.js       gerador das imagens fictícias
-src/lib/carousel.js   lógica do carrossel
-public/               arquivos estáticos (favicon, capturas)
+```bash
+git rm -r --cached node_modules
+git commit -m "Remove node_modules do repositório"
+git push
 ```
