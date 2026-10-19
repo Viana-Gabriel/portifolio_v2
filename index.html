@@ -1,127 +1,260 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="light">
   <meta name="theme-color" content="#EEF4FF">
   <title>Seu Nome — Landing pages</title>
-  <meta name="description" content="Designer e desenvolvedor de landing pages. Layout, texto e código em um só lugar, com medição pronta.">
+  <meta name="description"
+    content="Designer e desenvolvedor de landing pages. Layout, texto e código em um só lugar, com medição pronta.">
   <meta property="og:title" content="Seu Nome — Landing pages">
   <meta property="og:description" content="Páginas que explicam a oferta e levam ao clique.">
   <meta property="og:type" content="website">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=DM+Sans:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=DM+Sans:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap"></noscript>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=DM+Sans:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=DM+Sans:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap">
+  </noscript>
   <link rel="stylesheet" href="/src/style.css">
 </head>
+
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-a" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol></svg>
-<a class="skip" href="#projetos">Pular para os projetos</a>
+  <div class="hero">
+    <header class="wrap top">
+      <a class="logo" href="#">Gabriel Viana</a>
+      <nav class="nav" aria-label="Principal"><a href="#projetos">Projetos</a><a href="#servicos">Serviços</a><a
+          href="#case">Case</a><a href="#contato">Contato</a></nav>
+      <a class="btn" href="#contato">Fale comigo</a>
+    </header>
+    <div class="wrap hg">
+      <div>
+        <h1>Landing pages que explicam a oferta e levam ao clique.</h1>
+        <p>Cuido do layout, do texto e do código de cada página, com a medição pronta para você saber o que funcionou.
+        </p>
+        <a class="btn" href="#contato">Pedir orçamento</a>
+        <div class="chips"><span>Figma</span><span>HTML e CSS</span><span>Webflow</span></div>
+      </div>
+      <div class="vis" aria-hidden="true">
+        <div class="br">
+          <div class="mk">
+            <div class="bar"><b></b><b></b><b></b></div><img class="im" src="/src/assets/aura-wide.svg" alt=""
+              width="600" height="480" fetchpriority="high" decoding="async">
+          </div>
+        </div>
+        <div class="ph"><img class="im" src="/src/assets/casa-brasa.svg" alt="" width="600" height="860"
+            decoding="async"></div>
+      </div>
+    </div>
+  </div>
 
-<div class="hero">
-  <header class="wrap top">
-    <a class="logo" href="#">Seu Nome</a>
-    <nav class="nav" aria-label="Principal"><a href="#projetos">Projetos</a><a href="#servicos">Serviços</a><a href="#case">Case</a><a href="#contato">Contato</a></nav>
-    <a class="btn" href="#contato">Fale comigo</a>
-  </header>
-  <div class="wrap hg">
-    <div>
-      <h1>Landing pages que explicam a oferta e levam ao clique.</h1>
-      <p>Cuido do layout, do texto e do código de cada página, com a medição pronta para você saber o que funcionou.</p>
-      <a class="btn" href="#contato">Pedir orçamento</a>
-      <div class="chips"><span>Figma</span><span>HTML e CSS</span><span>Webflow</span><span>Analytics</span></div>
-    </div>
-    <div class="vis" aria-hidden="true">
-      <div class="br"><div class="mk"><div class="bar"><b></b><b></b><b></b></div><img class="im" src="/src/assets/aura-wide.svg" alt="" width="600" height="480" fetchpriority="high" decoding="async"></div></div>
-      <div class="ph"><img class="im" src="/src/assets/casa-brasa.svg" alt="" width="600" height="860" decoding="async"></div>
-    </div>
-  </div>
-  <a class="hint" href="#projetos">Role para ver os projetos
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 5 6 6 6-6"/><path d="m6 12 6 6 6-6"/></svg></a>
-</div>
+  <main>
+    <section id="projetos" aria-labelledby="h-p">
+      <div class="wide">
+        <h2 class="hd rv" id="h-p">Projetos que ajudei a<span>colocar no ar</span></h2>
+      </div>
+      <div role="region" aria-roledescription="carrossel" aria-label="Projetos">
+        <div class="trk" id="trk" tabindex="0" aria-label="Lista de projetos. Use as setas do teclado para navegar.">
+          <a class="slide" href="#" draggable="false" role="group" aria-roledescription="slide"
+            aria-label="Clínica Aura">
+           <img class="im" src="/src/assets/gestor-matheus.webp" alt="Landing page do gestor de tráfego Matheus Viana" width="800" height="1080" loading="lazy" decoding="async">
+            <div class="si"><span class="k">trafego pago</span>
+              <h3>Clínica Aura</h3>
+              <p>Agendamento sempre à vista no celular.</p><span class="go" aria-hidden="true"><svg class="i">
+                  <use href="#i-a" />
+                </svg></span>
+            </div>
+          </a>
+          <a class="slide" href="#" draggable="false" role="group" aria-roledescription="slide" aria-label="Finlo">
+            <img class="im" src="/src/assets/finlo.svg" alt="" width="600" height="860" loading="lazy" decoding="async">
+            <div class="si"><span class="k">Tecnologia</span>
+              <h3>Finlo</h3>
+              <p>Cadastro em dois campos e demonstração no topo.</p><span class="go" aria-hidden="true"><svg class="i">
+                  <use href="#i-a" />
+                </svg></span>
+            </div>
+          </a>
+          <a class="slide" href="#" draggable="false" role="group" aria-roledescription="slide" aria-label="Casa Brasa">
+            <img class="im" src="/src/assets/casa-brasa.svg" alt="" width="600" height="860" loading="lazy"
+              decoding="async">
+            <div class="si"><span class="k">Gastronomia</span>
+              <h3>Casa Brasa</h3>
+              <p>Cardápio visual e reserva em poucos toques.</p><span class="go" aria-hidden="true"><svg class="i">
+                  <use href="#i-a" />
+                </svg></span>
+            </div>
+          </a>
+          <a class="slide" href="#" draggable="false" role="group" aria-roledescription="slide"
+            aria-label="Curso Prisma">
+            <img class="im" src="/src/assets/curso-prisma.svg" alt="" width="600" height="860" loading="lazy"
+              decoding="async">
+            <div class="si"><span class="k">Educação</span>
+              <h3>Curso Prisma</h3>
+              <p>Pré-venda com módulos e garantia.</p><span class="go" aria-hidden="true"><svg class="i">
+                  <use href="#i-a" />
+                </svg></span>
+            </div>
+          </a>
+          <a class="slide" href="#" draggable="false" role="group" aria-roledescription="slide"
+            aria-label="Vértice Imóveis">
+            <img class="im" src="/src/assets/vertice.svg" alt="" width="600" height="860" loading="lazy"
+              decoding="async">
+            <div class="si"><span class="k">Imobiliário</span>
+              <h3>Vértice Imóveis</h3>
+              <p>Plantas e simulador de parcelas em destaque.</p><span class="go" aria-hidden="true"><svg class="i">
+                  <use href="#i-a" />
+                </svg></span>
+            </div>
+          </a>
+          <a class="slide" href="#" draggable="false" role="group" aria-roledescription="slide"
+            aria-label="Nômade Viagens">
+            <img class="im" src="/src/assets/nomade.svg" alt="" width="600" height="860" loading="lazy"
+              decoding="async">
+            <div class="si"><span class="k">Turismo</span>
+              <h3>Nômade Viagens</h3>
+              <p>Página de roteiros com reserva em poucos toques e fotos em destaque.</p><span class="go"
+                aria-hidden="true"><svg class="i">
+                  <use href="#i-a" />
+                </svg></span>
+            </div>
+          </a>
+          <a class="slide" href="#" draggable="false" role="group" aria-roledescription="slide"
+            aria-label="Oficina Verde">
+            <img class="im" src="/src/assets/oficina-verde.svg" alt="" width="600" height="860" loading="lazy"
+              decoding="async">
+            <div class="si"><span class="k">Casa e jardim</span>
+              <h3>Oficina Verde</h3>
+              <p>Landing de lançamento de uma linha de plantas, pensada para o celular.</p><span class="go"
+                aria-hidden="true"><svg class="i">
+                  <use href="#i-a" />
+                </svg></span>
+            </div>
+          </a>
+          <a class="slide" href="#" draggable="false" role="group" aria-roledescription="slide"
+            aria-label="Studio Lume">
+            <img class="im" src="/src/assets/studio-lume.svg" alt="" width="600" height="860" loading="lazy"
+              decoding="async">
+            <div class="si"><span class="k">Beleza</span>
+              <h3>Studio Lume</h3>
+              <p>Página de agendamento com serviços, equipe e depoimentos.</p><span class="go" aria-hidden="true"><svg
+                  class="i">
+                  <use href="#i-a" />
+                </svg></span>
+            </div>
+          </a>
+        </div>
+        <div class="ctl">
+          <button class="cb" id="prev" type="button" aria-label="Projeto anterior"><svg class="i flip">
+              <use href="#i-a" />
+            </svg></button>
+          <div class="cnt"><span id="num" aria-live="polite">01 / 08</span>
+            <div class="dots" id="dots"><button type="button" aria-label="Ir para o projeto 1"
+                aria-current="true"></button><button type="button" aria-label="Ir para o projeto 2"></button><button
+                type="button" aria-label="Ir para o projeto 3"></button><button type="button"
+                aria-label="Ir para o projeto 4"></button><button type="button"
+                aria-label="Ir para o projeto 5"></button><button type="button"
+                aria-label="Ir para o projeto 6"></button><button type="button"
+                aria-label="Ir para o projeto 7"></button><button type="button"
+                aria-label="Ir para o projeto 8"></button></div>
+          </div>
+          <button class="cb" id="next" type="button" aria-label="Próximo projeto"><svg class="i">
+              <use href="#i-a" />
+            </svg></button>
+        </div>
+      </div>
+      <div class="wide more rv">
+        <p>Cada projeto começa por uma pergunta: o que o visitante precisa entender para tomar a decisão? O design vem
+          depois dela.</p>
+        <a class="btn" href="#contato">Ver todos os projetos</a>
+      </div>
+    </section>
 
-<main>
-<section id="projetos" aria-labelledby="h-p">
-  <div class="wide"><h2 class="hd rv" id="h-p">Projetos que ajudei a<span>colocar no ar</span></h2></div>
-  <div role="region" aria-roledescription="carrossel" aria-label="Projetos">
-    <div class="trk" id="trk" tabindex="0" aria-label="Lista de projetos. Use as setas do teclado para navegar.">
-      <a class="slide" href="#" draggable="false" role="group" aria-roledescription="slide" aria-label="Clínica Aura">
-        <img class="im" src="/src/assets/aura.svg" alt="" width="600" height="860" loading="lazy" decoding="async">
-        <div class="si"><span class="k">Saúde</span><h3>Clínica Aura</h3><p>Agendamento sempre à vista no celular.</p><span class="go" aria-hidden="true"><svg class="i"><use href="#i-a"/></svg></span></div>
-      </a>
-      <a class="slide" href="#" draggable="false" role="group" aria-roledescription="slide" aria-label="Finlo">
-        <img class="im" src="/src/assets/finlo.svg" alt="" width="600" height="860" loading="lazy" decoding="async">
-        <div class="si"><span class="k">Tecnologia</span><h3>Finlo</h3><p>Cadastro em dois campos e demonstração no topo.</p><span class="go" aria-hidden="true"><svg class="i"><use href="#i-a"/></svg></span></div>
-      </a>
-      <a class="slide" href="#" draggable="false" role="group" aria-roledescription="slide" aria-label="Casa Brasa">
-        <img class="im" src="/src/assets/casa-brasa.svg" alt="" width="600" height="860" loading="lazy" decoding="async">
-        <div class="si"><span class="k">Gastronomia</span><h3>Casa Brasa</h3><p>Cardápio visual e reserva em poucos toques.</p><span class="go" aria-hidden="true"><svg class="i"><use href="#i-a"/></svg></span></div>
-      </a>
-      <a class="slide" href="#" draggable="false" role="group" aria-roledescription="slide" aria-label="Curso Prisma">
-        <img class="im" src="/src/assets/curso-prisma.svg" alt="" width="600" height="860" loading="lazy" decoding="async">
-        <div class="si"><span class="k">Educação</span><h3>Curso Prisma</h3><p>Pré-venda com módulos e garantia.</p><span class="go" aria-hidden="true"><svg class="i"><use href="#i-a"/></svg></span></div>
-      </a>
-      <a class="slide" href="#" draggable="false" role="group" aria-roledescription="slide" aria-label="Vértice Imóveis">
-        <img class="im" src="/src/assets/vertice.svg" alt="" width="600" height="860" loading="lazy" decoding="async">
-        <div class="si"><span class="k">Imobiliário</span><h3>Vértice Imóveis</h3><p>Plantas e simulador de parcelas em destaque.</p><span class="go" aria-hidden="true"><svg class="i"><use href="#i-a"/></svg></span></div>
-      </a>
-      <a class="slide" href="#" draggable="false" role="group" aria-roledescription="slide" aria-label="Nômade Viagens">
-        <img class="im" src="/src/assets/nomade.svg" alt="" width="600" height="860" loading="lazy" decoding="async">
-        <div class="si"><span class="k">Turismo</span><h3>Nômade Viagens</h3><p>Página de roteiros com reserva em poucos toques e fotos em destaque.</p><span class="go" aria-hidden="true"><svg class="i"><use href="#i-a"/></svg></span></div>
-      </a>
-      <a class="slide" href="#" draggable="false" role="group" aria-roledescription="slide" aria-label="Oficina Verde">
-        <img class="im" src="/src/assets/oficina-verde.svg" alt="" width="600" height="860" loading="lazy" decoding="async">
-        <div class="si"><span class="k">Casa e jardim</span><h3>Oficina Verde</h3><p>Landing de lançamento de uma linha de plantas, pensada para o celular.</p><span class="go" aria-hidden="true"><svg class="i"><use href="#i-a"/></svg></span></div>
-      </a>
-      <a class="slide" href="#" draggable="false" role="group" aria-roledescription="slide" aria-label="Studio Lume">
-        <img class="im" src="/src/assets/studio-lume.svg" alt="" width="600" height="860" loading="lazy" decoding="async">
-        <div class="si"><span class="k">Beleza</span><h3>Studio Lume</h3><p>Página de agendamento com serviços, equipe e depoimentos.</p><span class="go" aria-hidden="true"><svg class="i"><use href="#i-a"/></svg></span></div>
-      </a>
-    </div>
-    <div class="ctl">
-      <button class="cb" id="prev" type="button" aria-label="Projeto anterior"><svg class="i flip"><use href="#i-a"/></svg></button>
-      <div class="cnt"><span id="num" aria-live="polite">01 / 08</span><div class="dots" id="dots"><button type="button" aria-label="Ir para o projeto 1" aria-current="true"></button><button type="button" aria-label="Ir para o projeto 2"></button><button type="button" aria-label="Ir para o projeto 3"></button><button type="button" aria-label="Ir para o projeto 4"></button><button type="button" aria-label="Ir para o projeto 5"></button><button type="button" aria-label="Ir para o projeto 6"></button><button type="button" aria-label="Ir para o projeto 7"></button><button type="button" aria-label="Ir para o projeto 8"></button></div></div>
-      <button class="cb" id="next" type="button" aria-label="Próximo projeto"><svg class="i"><use href="#i-a"/></svg></button>
-    </div>
-  </div>
-  <div class="wide more rv">
-    <p>Cada projeto começa por uma pergunta: o que o visitante precisa entender para tomar a decisão? O design vem depois dela.</p>
-    <a class="btn" href="#contato">Ver todos os projetos</a>
-  </div>
-</section>
+    <section class="sv" id="servicos" aria-labelledby="h-s">
+      <div class="wrap">
+        <h2 class="hd rv" id="h-s">Como posso ajudar<span>no seu projeto</span></h2>
+        <div class="tri rv">
+          <div class="sc">
+            <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 20h9" />
+                <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" />
+              </svg></div>
+            <h3>Design</h3>
+            <p>Estrutura, hierarquia e identidade visual no Figma, aprovadas antes de virar código.</p>
+            <ul>
+              <li>Wireframe e protótipo</li>
+              <li>Identidade visual</li>
+              <li>Versão para celular</li>
+            </ul>
+          </div>
+          <div class="sc mid">
+            <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m16 18 6-6-6-6" />
+                <path d="m8 6-6 6 6 6" />
+              </svg></div>
+            <h3>Desenvolvimento</h3>
+            <p>Página leve, responsiva e acessível, pronta para publicar na sua hospedagem ou no Webflow.</p>
+            <ul>
+              <li>HTML, CSS e JavaScript</li>
+              <li>Formulários e integração com CRM</li>
+              <li>Otimização de velocidade</li>
+            </ul>
+          </div>
+          <div class="sc">
+            <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 3v18h18" />
+                <path d="M7 15v3" />
+                <path d="M12 9v9" />
+                <path d="M17 5v13" />
+              </svg></div>
+            <h3>Medição</h3>
+            <p>Eventos e metas configurados no Analytics para acompanhar cada clique importante.</p>
+            <ul>
+              <li>Google Analytics e Pixel</li>
+              <li>Testes A/B</li>
+              <li>Relatório mensal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="sv" id="servicos" aria-labelledby="h-s">
-  <div class="wrap">
-    <h2 class="hd rv" id="h-s">Como posso ajudar<span>no seu projeto</span></h2>
-    <div class="tri rv">
-      <div class="sc"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div><h3>Design</h3><p>Estrutura, hierarquia e identidade visual no Figma, aprovadas antes de virar código.</p><ul><li>Wireframe e protótipo</li><li>Identidade visual</li><li>Versão para celular</li></ul></div>
-      <div class="sc mid"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg></div><h3>Desenvolvimento</h3><p>Página leve, responsiva e acessível, pronta para publicar na sua hospedagem ou no Webflow.</p><ul><li>HTML, CSS e JavaScript</li><li>Formulários e integração com CRM</li><li>Otimização de velocidade</li></ul></div>
-      <div class="sc"><div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15v3"/><path d="M12 9v9"/><path d="M17 5v13"/></svg></div><h3>Medição</h3><p>Eventos e metas configurados no Analytics para acompanhar cada clique importante.</p><ul><li>Google Analytics e Pixel</li><li>Testes A/B</li><li>Relatório mensal</li></ul></div>
-    </div>
-  </div>
-</section>
+    <section class="case" id="case" aria-labelledby="h-c">
+      <div class="wrap">
+        <div class="big rv">
+          <div class="txt"><span class="k">Case em destaque</span>
+            <h3 id="h-c">Clínica Aura</h3>
+            <p>O site antigo escondia o botão de agendar. Refiz a página em uma coluna, com o agendamento sempre à vista
+              no celular.</p><a class="btn" href="#">Ver case completo</a>
+          </div>
+          <div class="mk" aria-hidden="true">
+            <div class="bar"><b></b><b></b><b></b></div><img class="im" src="/src/assets/aura-wide.svg" alt=""
+              width="600" height="480" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<section class="case" id="case" aria-labelledby="h-c">
-  <div class="wrap">
-    <div class="big rv">
-      <div class="txt"><span class="k">Case em destaque</span><h3 id="h-c">Clínica Aura</h3><p>O site antigo escondia o botão de agendar. Refiz a página em uma coluna, com o agendamento sempre à vista no celular.</p><a class="btn" href="#">Ver case completo</a></div>
-      <div class="mk" aria-hidden="true"><div class="bar"><b></b><b></b><b></b></div><img class="im" src="/src/assets/aura-wide.svg" alt="" width="600" height="480" loading="lazy" decoding="async"></div>
+  <footer class="ct" id="contato">
+    <div class="wrap">
+      <h2 class="hd" style="margin-bottom:28px">Vamos conversar<span>sobre o seu projeto?</span></h2>
+      <a class="btn" href="mailto:contato@seudominio.com.br">Enviar e-mail</a>
+      <a class="mail" href="mailto:contato@seudominio.com.br">contato@seudominio.com.br</a>
+      <div class="ft"><span>© 2026 Seu Nome</span>
+        <div><a href="#">LinkedIn</a><a href="#">Instagram</a><a href="#">WhatsApp</a></div>
+      </div>
     </div>
-  </div>
-</section>
-</main>
-
-<footer class="ct" id="contato">
-  <div class="wrap">
-    <h2 class="hd" style="margin-bottom:28px">Vamos conversar<span>sobre o seu projeto?</span></h2>
-    <a class="btn" href="mailto:contato@seudominio.com.br">Enviar e-mail</a>
-    <a class="mail" href="mailto:contato@seudominio.com.br">contato@seudominio.com.br</a>
-    <div class="ft"><span>© 2026 Seu Nome</span><div><a href="#">LinkedIn</a><a href="#">Instagram</a><a href="#">WhatsApp</a></div></div>
-  </div>
-</footer>
+  </footer>
   <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>
